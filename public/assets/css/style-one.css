@@ -1,0 +1,28 @@
+#sidebar {
+    max-height: 100%;
+    /* Adjust the maximum height as needed */
+    overflow-y: auto;
+}
+
+/* Style the scrollbar */
+#sidebar::-webkit-scrollbar {
+    width: 5px;
+    /* Adjust the width of the scrollbar */
+    height: 10px;
+    /* Adjust the height of the scrollbar */
+}
+
+/* Track */
+#sidebar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+#sidebar::-webkit-scrollbar-thumb {
+    background: rgb(204, 204, 204);
+}
+
+/* Handle on hover */
+#sidebar::-webkit-scrollbar-thumb:hover {
+    background: rgb(204, 204, 204);
+}

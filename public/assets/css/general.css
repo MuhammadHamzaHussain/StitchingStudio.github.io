@@ -1,0 +1,145 @@
+/*-----------------
+	1. General
+-----------------------*/
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #f7f7fa;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    height: 100%;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0;
+    color: #000000;
+}
+
+a:hover,
+a:active,
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+.form-control {
+    border: 1px solid #ddd;
+    box-shadow: none;
+    color: #333;
+    font-size: 15px;
+    height: 45px;
+}
+
+.form-control:focus {
+    border-color: #3d5ee1;
+    box-shadow: none;
+    outline: 0 none;
+}
+
+.form-control.form-control-sm {
+    height: calc(1.5em + .5rem + 2px);
+}
+
+.form-control-sm {
+    background-color: #fff;
+}
+
+.form-control.form-control-lg {
+    height: calc(1.5em + 1rem + 2px);
+}
+
+a {
+    color: #3d5ee1;
+    text-decoration: none;
+}
+
+input,
+button,
+a {
+    transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+}
+
+input,
+input:focus,
+button,
+button:focus {
+    outline: none;
+}
+
+input[type="file"] {
+    height: auto;
+    min-height: calc(1.5em + .75rem + 2px);
+}
+
+input[type=text],
+input[type=password] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.navbar-nav>li {
+    float: left;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.input-group .form-control {
+    height: 40px;
+}
+
+.input-group .input-height {
+    height: auto;
+}
+
+.nav .open>a,
+.nav .open>a:focus,
+.nav .open>a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+
+ul,
+ol {
+    padding: 0px;
+    list-style: none;
+}

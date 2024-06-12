@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization</title>
+
+    <style>
+        /* Style for the headings */
+        .heading {
+            text-align: start;
+            margin-left: 40px;
+            cursor: pointer;
+        }
+
+        /* Style for the scrollable container */
+        .scrollable-container {
+            overflow-y: auto;
+            max-height: 600px;
+            /* Adjust the height as needed */
+            margin-left: 20px;
+        }
+
+        /* Style for the image containers */
+        .image-container {
+            text-align: start;
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 330px;
+        }
+
+        /* Style for individual images */
+        .image-box {
+            margin: 0 10px 10px 0;
+            width: calc(33.33% - 10px);
+        }
+
+        /* Style for the images */
+        .image-box img {
+            width: 100px;
+            height: 100px;
+            display: block;
+            cursor: pointer;
+        }
+
+        /* Style for the mockup container */
+        .container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 550px;
+            height: 550px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Style for the mockup image */
+        .container img.mockup {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Scrollable container -->
+    <div class="scrollable-container">
+        <!-- Heading for mockups -->
+        <div class="heading">
+            <h1 id="mockupHeading">Choose a Mockup</h1>
+        </div>
+        <!-- Image container for mockups -->
+        <div class="image-container" id="mockupImageContainer">
+            <!-- Image boxes for mockups -->
+        </div>
+        <!-- Heading for fabrics -->
+        <div class="heading">
+            <h1 id="fabricHeading">Choose a Fabric</h1>
+        </div>
+        <!-- Image container for fabrics -->
+        <div class="image-container" id="fabricImageContainer">
+            <!-- Image boxes for fabrics -->
+        </div>
+    </div>
+    <!-- Mockup container -->
+    <div class="container" id="mockupContainer">
+        <img class="mockup" src="Ban 1.png" alt="mockup">
+    </div>
+    <!-- Input for selecting images from the computer -->
+    <input type="file" id="mockupImageInput" style="display: none;" accept="image/*">
+    <input type="file" id="fabricImageInput" style="display: none;" accept="image/*">
+    <script>
+        // Function to handle when the user selects a mockup image
+        document.getElementById('mockupHeading').addEventListener('click', function () {
+            document.getElementById('mockupImageInput').click(); // Clicking the hidden file input
+        });
+
+        // Function to handle when the user selects a fabric image
+        document.getElementById('fabricHeading').addEventListener('click', function () {
+            document.getElementById('fabricImageInput').click(); // Clicking the hidden file input
+        });
+
+        // Function to set image of the mockup container when a mockup is selected
+        function setImageInMockup(imageUrl) {
+            document.querySelector('#mockupContainer img.mockup').src = imageUrl;
+        }
+
+        // Function to set the fabric as the background of the mockup container
+        function setFabricAsBackground(imageUrl) {
+            document.getElementById('mockupContainer').style.backgroundImage = 'url(' + imageUrl + ')';
+        }
+
+        // Function to handle when a mockup image is selected from the file input
+        document.getElementById('mockupImageInput').addEventListener('change', function (event) {
+            const fileList = event.target.files; // Get the selected files
+            if (fileList.length > 0) {
+                const file = fileList[0]; // Get the first file
+                const imageUrl = URL.createObjectURL(file); // Create URL for the selected image
+                // Set the selected image as the image of the mockup container
+                setImageInMockup(imageUrl);
+                // Create and append a new image box for the selected image
+                createImageBox(imageUrl, true, 'mockup');
+            }
+        });
+
+        // Function to handle when a fabric image is selected from the file input
+        document.getElementById('fabricImageInput').addEventListener('change', function (event) {
+            const fileList = event.target.files; // Get the selected files
+            if (fileList.length > 0) {
+                const file = fileList[0]; // Get the first file
+                const imageUrl = URL.createObjectURL(file); // Create URL for the selected image
+                // Set the selected image as the background of the mockup container
+                setFabricAsBackground(imageUrl);
+                // Create and append a new image box for the selected image
+                createImageBox(imageUrl, true, 'fabric');
+            }
+        });
+
+        // Function to create and append a new image box
+        function createImageBox(imageUrl, fromDevice = false, type = 'mockup') {
+            const newImageBox = document.createElement('div');
+            newImageBox.classList.add('image-box');
+            const newImage = document.createElement('img');
+            newImage.src = imageUrl;
+            newImage.addEventListener('click', function () {
+                if (type === 'mockup') {
+                    setImageInMockup(imageUrl);
+                } else {
+                    setFabricAsBackground(imageUrl);
+                }
+            });
+            newImageBox.appendChild(newImage);
+            // Append to the appropriate image container based on the type
+            if (type === 'mockup') {
+                if (fromDevice) {
+                    document.getElementById('mockupImageContainer').appendChild(newImageBox);
+                } else {
+                    document.getElementById('mockupImageContainer').prepend(newImageBox);
+                }
+            } else {
+                if (fromDevice) {
+                    document.getElementById('fabricImageContainer').appendChild(newImageBox);
+                } else {
+                    document.getElementById('fabricImageContainer').prepend(newImageBox);
+                }
+            }
+        }
+
+        // Sample images to display initially for mockups and fabrics
+        const mockupImages = ['ban 2.png', 'ban 3.png', 'ban 4.png', 'C1.png', 'C2.png', 'C3.png'];
+        const fabricImages = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg'];
+
+        // Display sample mockup images initially
+        mockupImages.forEach(function (imageUrl) {
+            createImageBox(imageUrl, false, 'mockup');
+        });
+
+        // Display sample fabric images initially
+        fabricImages.forEach(function (imageUrl) {
+            createImageBox(imageUrl, false, 'fabric');
+        });
+    </script>
+</body>
+
+</html>

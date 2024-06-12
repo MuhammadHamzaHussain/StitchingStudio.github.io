@@ -1,0 +1,512 @@
+/*-----------------
+	14. Dashboard
+-----------------------*/
+
+.bg-comman {
+    background-color: #fff;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 31px 3px rgba(44, 50, 63, 0.02);
+}
+
+.db-icon {
+    font-size: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+}
+
+/* .bg-comman .db-icon {
+    background-color: #EDF4FF;
+    border-radius: 8px;
+} */
+
+.db-info h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 0;
+}
+
+.db-info h6 {
+    margin: 0px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #808191;
+    margin-bottom: 5px;
+}
+
+.card-chart .card-body {
+    padding: 8px;
+}
+
+.activity-feed {
+    list-style: none;
+    margin-bottom: 0;
+    margin-left: 5px;
+    padding: 0;
+    width: 100%;
+}
+
+.activity-feed .feed-item {
+    border-left: 2px solid #e4e8eb;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.activity-feed .feed-item:last-child {
+    border-color: transparent;
+    padding-bottom: 0;
+}
+
+.activity-feed .feed-item:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -7px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #3d5ee1;
+}
+
+.activity-feed .feed-item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    width: 7px;
+    height: 7px;
+    top: 3px;
+    left: -4px;
+    border-radius: 50px;
+}
+
+.activity-feed .feed-item .feed-date {
+    display: block;
+    position: relative;
+    color: #777;
+    text-transform: uppercase;
+    font-size: 13px;
+    top: -2px;
+}
+
+.activity-feed .feed-item .feed-text {
+    color: #777;
+    position: relative;
+}
+
+.activity-feed .feed-item .feed-text a {
+    color: #333;
+    font-weight: 600;
+}
+
+.activity-feed .feed-item .feed-date1 {
+    display: block;
+    position: relative;
+    color: #777;
+    font-size: 12px;
+    top: -2px;
+}
+
+.activity-feed .feed-item .feed-text1 a {
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.activity-feed .feed-item p {
+    color: #3bbafd;
+    font-weight: 400;
+    margin: 0;
+    font-size: 14px;
+}
+
+.activity-feed .feed-item p span {
+    color: #ffba38;
+}
+
+.activity-btns .btn-info {
+    min-width: 151px;
+    background: #F4FEFF;
+    border: 1px solid #F4FEFF;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.activity-btns .btn-info:hover {
+    background-color: #028ee1;
+    border-color: #028ee1;
+    color: #fff;
+}
+
+.sm-box {
+    padding: 11px;
+    box-shadow: 0px 0px 31px 3px rgba(44, 50, 63, 0.02);
+    border-radius: 10px;
+    flex-direction: inherit;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.sm-box .fab {
+    font-size: 80px;
+    position: absolute;
+    right: 15px;
+    bottom: 0px;
+}
+
+.sm-box h6 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.sm-box p {
+    color: #fff;
+    font-size: 12px;
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+.card.card-chart,
+.card.comman-shadow {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 31px rgba(44, 50, 63, 0.02);
+    border-radius: 15px;
+    border: 0;
+}
+
+.card.card-chart .card-header,
+.card.comman-shadow .card-header {
+    border-radius: 15px 15px 0 0;
+    border-bottom: 0;
+    padding-bottom: 10px;
+}
+
+.star-menus a {
+    width: 25px;
+    height: 28px;
+    background: #F4F4F4;
+    display: flex;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 14px;
+}
+
+.chart-list-out {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: end;
+    -webkit-justify-content: end;
+    -ms-flex-pack: end;
+    margin-bottom: 0;
+}
+
+.chart-list-out li {
+    margin-right: 10px;
+    color: #808191;
+    font-size: 11px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.chart-list-out li.star-menus {
+    margin-right: 0;
+}
+
+.chart-list-out span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.circle-blue {
+    background: #3D5EE1;
+}
+
+.circle-green {
+    background: #70C4CF;
+}
+
+.circle-gray {
+    background: #EBEBEB;
+}
+
+.chart-list-out.student-ellips {
+    margin-left: auto;
+}
+
+.star-student.table-striped tbody tr:nth-of-type(even) {
+    background-color: #FAFAFA;
+}
+
+.star-student.table-striped tbody tr:nth-of-type(odd) {
+    background-color: transparent;
+}
+
+.star-student.table-striped tbody tr td,
+.star-student.table-striped tbody tr td a {
+    color: #666;
+}
+
+.star-student.table-striped tbody tr td img {
+    margin-right: 10px;
+}
+
+.activity-awards {
+    margin-bottom: 38px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.award-boxs {
+    background: #EDF4FF;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    margin-right: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+}
+
+.award-list-outs h4 {
+    color: #2C323F;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.award-list-outs h5 {
+    color: #808191;
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.award-time-list {
+    margin-left: auto;
+}
+
+.award-time-list span {
+    background: #FFF9ED;
+    color: #808191;
+    font-weight: 400;
+    font-size: 11px;
+    padding: 5px 9px;
+    border-radius: 6px;
+}
+
+.social-boxs {
+    background: #fff;
+    width: 63px;
+    height: 59px;
+    border-radius: 8px;
+    margin-left: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+}
+
+.form-title {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: inherit;
+    color: #333;
+    white-space: normal;
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.form-title span {
+    padding: 0px 0.5rem 0 0;
+    background-color: #fff;
+    display: inline-block;
+    z-index: 2;
+    position: relative;
+}
+
+
+
+.local-forms {
+    position: relative;
+}
+
+.local-forms label {
+    font-size: 13px;
+    color: #6c757d;
+    font-weight: 500;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background: #fff;
+    margin-bottom: 0;
+    padding: 0px 5px;
+    z-index: 99;
+}
+
+.local-forms .form-control::placeholder {
+    color: #333;
+    font-size: 14px;
+}
+
+.form-group.local-forms {
+    margin-bottom: 40px;
+}
+
+
+
+#checkBoxes .form-custom .form-control {
+    padding-left: 14px;
+    border: 1px solid rgba(231, 234, 252, 0.75);
+    border-radius: 6px;
+}
+
+#checkBoxes .form-custom .form-control::placeholder {
+    color: #8F9BBA;
+}
+
+.multipleSelection #checkBoxes.form-custom .form-control {
+    padding-left: 25px;
+    background: #F5F6FA;
+    border: 1px solid #E6E9F4;
+    border-radius: 5px;
+    height: 33px;
+}
+
+.multipleSelection #checkBoxes .form-custom i {
+    position: absolute;
+    top: 35%;
+    left: 6px;
+    color: #7E84A3;
+    font-size: 12px;
+}
+
+#checkBoxes .btn,
+#checkBox .btn {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 0px;
+}
+
+#checkBoxes .btn-grey {
+    background: rgba(231, 234, 252, 0.75);
+    color: #1B2559;
+    margin-top: 10px;
+}
+
+#checkBoxes .btn-grey:hover {
+    background: #18aefa;
+    color: #fff;
+}
+
+.checkbox-title {
+    font-weight: 600;
+    font-size: 16px;
+    color: #3d5ee1;
+    margin-bottom: 14px;
+}
+
+.custom_check {
+    color: #1B2559;
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    cursor: pointer;
+    font-weight: 400;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.custom_check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom_check input:checked~.checkmark {
+    background-color: #3d5ee1;
+    border-color: #3d5ee1;
+} 
+
+.custom_check .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 19px;
+    width: 21px;
+    border: 1px solid #C4C4C4;
+    background-color: #fff;
+    border-radius: 6px;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom_check .checkmark::after {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 2px;
+    color: #ffffff;
+    font-size: 9px;
+}
+
+.custom_check input:checked~.checkmark:after {
+    display: block;
+}

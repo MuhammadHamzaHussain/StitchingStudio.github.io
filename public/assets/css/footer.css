@@ -1,0 +1,16 @@
+/*-----------------
+	9. Footer
+-----------------------*/
+
+footer {
+    padding: 17px 0px;
+    background: #fff;
+    text-align: center;
+}
+
+footer p {
+    color: #808191;
+    font-size: 14px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
